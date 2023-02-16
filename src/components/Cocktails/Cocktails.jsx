@@ -11,11 +11,6 @@ function Cocktails({login, order, setOrder}) {
     }, []);
 
     const addToOrder = (cocktail) => {
-        const item = {
-            strDrink: cocktail.strDrink,
-            strDrinkThumb: cocktail.strDrinkThumb,
-            idDrink: cocktail.strDrink,
-        };
         setOrder([...order, item])
     }
 
