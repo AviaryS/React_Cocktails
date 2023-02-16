@@ -11,7 +11,9 @@ function Cocktails({login, order, setOrder}) {
     }, []);
 
     const addToOrder = (cocktail) => {
-        setOrder([...order, item])
+        if (order.find((x) => x.idDrink === cocktail.idDrink) === undefined) {
+            setOrder([...order, cocktail]);
+        }
     }
 
     return (
